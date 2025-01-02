@@ -3,12 +3,6 @@
 -- Example of disabling some plugins. Add yours
 local disabled = {
   {
-    "akinsho/bufferline.nvim",
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-  },
-  {
     "autolist.nvim",
   },
 }
