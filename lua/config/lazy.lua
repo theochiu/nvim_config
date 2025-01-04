@@ -22,6 +22,9 @@ require("lazy").setup({
     {
       import = "plugins.extras.ui.colorschemes.monokai-pro",
     },
+    {
+      "EdenEast/nightfox.nvim",
+    },
   },
   ui = {
     backdrop = 100,

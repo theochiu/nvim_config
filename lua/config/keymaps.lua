@@ -233,3 +233,7 @@ map("n", "<leader>ghb", Snacks.git.blame_line, { desc = "Blame Line" })
 -- Windows Split
 map("n", "<leader>_", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>\\", "<C-W>v", { desc = "Split Window Right", remap = true })
+
+vim.keymap.set("i", "<C-/>", function()
+  require("ts_comment").toggle.linewise.current()
+end, { noremap = true, silent = true })
