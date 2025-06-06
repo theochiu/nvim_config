@@ -23,6 +23,15 @@ return {
   -- Clangd
   { "p00f/clangd_extensions.nvim", optional = true },
 
+  {
+    "neovim/nvim-lspconfig",
+    event = "BufReadPre",
+    dependencies = { "hrsh7th/cmp-nvim-lsp" }, -- if you use nvim-cmp
+    config = function()
+      require("lspconfig").clangd.setup({})
+    end,
+  },
+
   -- CMake
   { "Civitasv/cmake-tools.nvim", optional = true },
 

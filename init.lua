@@ -2,3 +2,6 @@
 require("config.lazy")
 -- require("plugins.extras.ui.colorschemes.monokai-pro")
 vim.cmd([[colorscheme carbonfox]])
+
+vim.opt.number = true
+vim.opt.relativenumber = false
