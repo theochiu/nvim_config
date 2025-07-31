@@ -25,6 +25,9 @@ require("lazy").setup({
     {
       "EdenEast/nightfox.nvim",
     },
+    {
+      "nyoom-engineering/oxocarbon.nvim",
+    },
   },
   ui = {
     backdrop = 100,
