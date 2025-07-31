@@ -80,23 +80,23 @@ ac({ "BufNewFile", "BufRead" }, {
 })
 
 -- Toggle between relative/absolute line numbers
-local numbertoggle = ag("numbertoggle", { clear = true })
-ac({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
-  pattern = "*",
-  group = numbertoggle,
-  callback = function()
-    if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
-      vim.opt.relativenumber = true
-    end
-  end,
-})
+-- local numbertoggle = ag("numbertoggle", { clear = true })
+-- ac({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
+--   pattern = "*",
+--   group = numbertoggle,
+--   callback = function()
+--     if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
+--       vim.opt.relativenumber = true
+--     end
+--   end,
+-- })
 
 ac({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
   pattern = "*",
   group = numbertoggle,
   callback = function()
     if vim.o.nu then
-      vim.opt.relativenumber = false
+      -- vim.opt.relativenumber = false
       vim.cmd.redraw()
     end
   end,
