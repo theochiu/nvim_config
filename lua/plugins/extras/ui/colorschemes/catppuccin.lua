@@ -105,40 +105,40 @@ return {
       },
     },
   },
-  {
-    "akinsho/bufferline.nvim",
-    opts = {
-      highlights = require("catppuccin.groups.integrations.bufferline").get({
-        styles = { "italic", "bold" },
-        custom = {
-          all = {
-            fill = {
-              bg = palette.mantle,
-            },
-            separator_selected = {
-              bg = palette.base,
-              fg = palette.mantle,
-            },
-            separator = {
-              bg = palette.mantle,
-              fg = palette.mantle,
-            },
-            tab_separator = {
-              bg = palette.mantle,
-              fg = palette.mantle,
-            },
-            tab_selected = {
-              bg = palette.base,
-            },
-            tab_separator_selected = {
-              bg = palette.base,
-              fg = palette.mantle,
-            },
-          },
-        },
-      }),
-    },
-  },
+  -- {
+  --   "akinsho/bufferline.nvim",
+  --   opts = {
+  --     highlights = require("catppuccin.groups.integrations.bufferline").get({
+  --       styles = { "italic", "bold" },
+  --       custom = {
+  --         all = {
+  --           fill = {
+  --             bg = palette.mantle,
+  --           },
+  --           separator_selected = {
+  --             bg = palette.base,
+  --             fg = palette.mantle,
+  --           },
+  --           separator = {
+  --             bg = palette.mantle,
+  --             fg = palette.mantle,
+  --           },
+  --           tab_separator = {
+  --             bg = palette.mantle,
+  --             fg = palette.mantle,
+  --           },
+  --           tab_selected = {
+  --             bg = palette.base,
+  --           },
+  --           tab_separator_selected = {
+  --             bg = palette.base,
+  --             fg = palette.mantle,
+  --           },
+  --         },
+  --       },
+  --     }),
+  --   },
+  -- },
   {
     "rasulomaroff/reactive.nvim",
     optional = true,

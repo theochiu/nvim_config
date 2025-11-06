@@ -4,21 +4,19 @@ local prefix = "<leader>cl"
 return {
   {
     "neovim/nvim-lspconfig",
-    init = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-
-      keys[#keys + 1] = { "<leader>cl", false }
-      keys[#keys + 1] = { "<leader>cil", "<cmd>LspInfo<cr>", desc = "Lsp" }
-      keys[#keys + 1] = { prefix .. "r", "<cmd>LspRestart<cr>", desc = "Restart Lsp" }
-      keys[#keys + 1] = { prefix .. "s", "<cmd>LspStart<cr>", desc = "Start Lsp" }
-      keys[#keys + 1] = { prefix .. "S", "<cmd>LspStop<cr>", desc = "Stop Lsp" }
-
-      -- stylua: ignore start
-      keys[#keys + 1] = { prefix .. "r", function() vim.lsp.buf.remove_workspace_folder() end, desc = "Remove workspace" }
-      keys[#keys + 1] = { prefix .. "a", function() vim.lsp.buf.add_workspace_folder() end, desc = "Add workspace" }
-      -- stylua: ignore end
-    end,
     opts = {
+      servers = {
+	  ['*'] = {
+             keys = {
+       { "<leader>cl", false },
+      { "<leader>cil", "<cmd>LspInfo<cr>", desc = "Lsp" },
+      { prefix .. "r", "<cmd>LspRestart<cr>", desc = "Restart Lsp" },
+      { prefix .. "s", "<cmd>LspStart<cr>", desc = "Start Lsp" },
+      { prefix .. "S", "<cmd>LspStop<cr>", desc = "Stop Lsp" }
+
+       },
+	  },
+      },
       diagnostics = {
         virtual_text = {
           float = {

@@ -67,7 +67,7 @@ return {
 
   -- Rust
   { "Saecki/crates.nvim", optional = true },
-  { "mrcjkb/rustaceanvim", optional = true },
+  -- { "mrcjkb/rustaceanvim", optional = true },
 
   -- Tailwind
   { "roobert/tailwindcss-colorizer-cmp.nvim", optional = true },

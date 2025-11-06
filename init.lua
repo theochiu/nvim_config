@@ -5,4 +5,5 @@ require("config.lazy")
 vim.opt.number = true
 vim.opt.relativenumber = false
 -- vim.cmd([[colorscheme carbonfox]])
-vim.cmd([[colorscheme oxocarbon]])
+vim.cmd([[colorscheme catppuccin-mocha]])
+vim.cmd([[ set nornu]])

@@ -4,6 +4,7 @@
 local disabled = {
   {
     "autolist.nvim",
+    "bufferline.nvim",
   },
 }
 

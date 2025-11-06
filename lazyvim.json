@@ -5,7 +5,6 @@
     "lazyvim.plugins.extras.editor.mini-move",
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.util.dot",
-    "plugins.extras.coding.ai.codecompanion",
     "plugins.extras.coding.ai.codeium",
     "plugins.extras.coding.annotation",
     "plugins.extras.coding.multicursor",
@@ -75,7 +74,7 @@
   ],
   "install_version": 7,
   "news": {
-    "NEWS.md": "10960"
+    "NEWS.md": "11866"
   },
   "version": 8
 }
