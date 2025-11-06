@@ -5,18 +5,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      servers = {
-	  ['*'] = {
-             keys = {
-       { "<leader>cl", false },
-      { "<leader>cil", "<cmd>LspInfo<cr>", desc = "Lsp" },
-      { prefix .. "r", "<cmd>LspRestart<cr>", desc = "Restart Lsp" },
-      { prefix .. "s", "<cmd>LspStart<cr>", desc = "Start Lsp" },
-      { prefix .. "S", "<cmd>LspStop<cr>", desc = "Stop Lsp" }
-
-       },
-	  },
-      },
       diagnostics = {
         virtual_text = {
           float = {
@@ -40,6 +28,15 @@ return {
         enabled = false,
       },
       servers = {
+        ["*"] = {
+          keys = {
+            { "<leader>cl", false },
+            { "<leader>cil", "<cmd>LspInfo<cr>", desc = "Lsp" },
+            { prefix .. "r", "<cmd>LspRestart<cr>", desc = "Restart Lsp" },
+            { prefix .. "s", "<cmd>LspStart<cr>", desc = "Start Lsp" },
+            { prefix .. "S", "<cmd>LspStop<cr>", desc = "Stop Lsp" },
+          },
+        },
         lua_ls = {
           settings = {
             Lua = {
