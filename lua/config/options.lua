@@ -50,3 +50,4 @@ if vim.fn.has("nvim-0.10") == 1 then
 end
 
 o.conceallevel = 2
+vim.opt.relativenumber = false
