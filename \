@@ -29,12 +29,11 @@ require("lazy").setup({
       "nyoom-engineering/oxocarbon.nvim",
     },
     {
-	    "saghen/blink.cmp",
-	    opts = {
+      "saghen/blink.cmp",
+        opts = {
 	    enabled = false,
-	    },
-    },
-  },
+	  },
+      },
   ui = {
     backdrop = 100,
   },
@@ -60,6 +59,7 @@ require("lazy").setup({
         "tutor",
         "netrwPlugin",
         "zipPlugin",
+	"saghen/blink.cmp",
       },
     },
   },
