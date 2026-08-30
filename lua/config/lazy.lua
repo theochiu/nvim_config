@@ -30,9 +30,11 @@ require("lazy").setup({
     },
     {
 	    "saghen/blink.cmp",
-	    opts = {
-	    enabled = false,
-	    },
+          opts = {
+        enabled = function()
+  return false
+        end,
+      },
     },
   },
   ui = {

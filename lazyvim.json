@@ -5,7 +5,6 @@
     "lazyvim.plugins.extras.editor.mini-move",
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.util.dot",
-    "plugins.extras.coding.ai.codeium",
     "plugins.extras.coding.annotation",
     "plugins.extras.coding.multicursor",
     "plugins.extras.coding.recorder",
@@ -68,7 +67,6 @@
     "plugins.extras.util.smart-splits",
     "plugins.extras.util.snacks-extended",
     "plugins.extras.util.vscode",
-    "plugins.extras.util.wakatime",
     "plugins.extras.util.yadm",
     "plugins.extras.util.yazi"
   ],

@@ -3,7 +3,7 @@
 return {
   -- Coding
   { "tzachar/cmp-tabnine", optional = true },
-  { "Exafunction/codeium.nvim", optional = true },
+
   { "echasnovski/mini.surround", optional = true },
   { "JoosepAlviste/nvim-ts-context-commentstring", optional = true },
 
