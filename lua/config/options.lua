@@ -9,6 +9,10 @@ go.lualine_info_extras = false
 -- go.codeium_cmp_hide = false
 go.lazygit_config = false
 
+vim.opt.autoindent = true
+vim.opt.smartindent = false
+vim.opt.cindent = true
+
 vim.g.lazyvim_cmp = "nvim-cmp"
 
 -- Define leader key

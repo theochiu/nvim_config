@@ -8,6 +8,10 @@ vim.opt.relativenumber = false
 vim.cmd([[colorscheme catppuccin-mocha]])
 vim.cmd([[ set nornu]])
 
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 -- In your init.lua or lua/config/keymaps.lua
 vim.keymap.set('n', '<leader>a', function()
