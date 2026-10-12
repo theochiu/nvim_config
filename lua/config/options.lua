@@ -13,7 +13,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = false
 vim.opt.cindent = true
 
-vim.g.lazyvim_cmp = "nvim-cmp"
+-- vim.g.lazyvim_cmp = "nvim-cmp"
 
 -- Define leader key
 go.mapleader = " "
@@ -32,9 +32,9 @@ go.editorconfig = true
 
 -- Root dir detection
 go.root_spec = {
-  "lsp",
-  { ".git", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src" },
-  "cwd",
+    "lsp",
+    { ".git", "lua", ".obsidian", "package.json", "Makefile", "go.mod", "cargo.toml", "pyproject.toml", "src" },
+    "cwd",
 }
 
 -- Disable annoying cmd line stuff
@@ -52,7 +52,7 @@ o.breakindent = true
 
 -- Smoothscroll
 if vim.fn.has("nvim-0.10") == 1 then
-  o.smoothscroll = true
+    o.smoothscroll = true
 end
 
 o.conceallevel = 2

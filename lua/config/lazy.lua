@@ -23,14 +23,28 @@ require("lazy").setup({
             import = "plugins.extras.ui.colorschemes.monokai-pro",
         },
         {
-            import = "plugins.extras.coding.cmp",
-        },
-        {
             "EdenEast/nightfox.nvim",
         },
         {
             "nyoom-engineering/oxocarbon.nvim",
         },
+        {
+            "saghen/blink.cmp",
+            version = "1.*", -- Pin to tagged releases to prevent breaking upstream API updates
+            dependencies = {
+                "rafamadriz/friendly-snippets",
+            },
+            config = function(_, opts)
+                -- 1. SMASH LAZY'S ACTIVE INTERCEPTORS IMMEDIATELY
+                pcall(vim.keymap.del, "i", "<Tab>")
+                pcall(vim.keymap.del, "i", "<S-Tab>")
+                pcall(vim.keymap.del, "i", "<CR>")
+
+                -- 2. Run blink's native engine configuration
+                require("blink.cmp").setup(opts)
+            end,
+        }
+
 
     },
     ui = {
