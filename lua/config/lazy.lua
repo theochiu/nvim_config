@@ -28,14 +28,7 @@ require("lazy").setup({
     {
       "nyoom-engineering/oxocarbon.nvim",
     },
-    {
-	    "saghen/blink.cmp",
-          opts = {
-        enabled = function()
-  return false
-        end,
-      },
-    },
+
   },
   ui = {
     backdrop = 100,
