@@ -13,28 +13,24 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
--- In your init.lua or lua/config/keymaps.lua
 vim.keymap.set('n', '<leader>a', function()
-  local ok, cmp = pcall(require, 'cmp')
-  if not ok then
-    vim.notify("nvim-cmp is not loaded yet!", vim.log.levels.ERROR)
-    return
-  end
+    local ok, blink = pcall(require, 'blink.cmp')
+    if not ok then
+        vim.notify("blink.cmp is not loaded yet!", vim.log.levels.ERROR)
+        return
+    end
 
-  local current_config = cmp.get_config()
-  if current_config.completion.autocomplete == false then
-    cmp.setup({
-      completion = {
-        autocomplete = { cmp.TriggerEvent.TextChanged }
-      }
-    })
-    vim.notify("Autocomplete: ENABLED", vim.log.levels.INFO)
-  else
-    cmp.setup({
-      completion = {
-        autocomplete = false
-      }
-    })
-    vim.notify("Autocomplete: DISABLED", vim.log.levels.WARN)
-  end
+    -- Toggle buffer-local completion state (default to true if nil)
+    if vim.b.completion == nil then
+        vim.b.completion = true
+    end
+    vim.b.completion = not vim.b.completion
+
+    if vim.b.completion then
+        vim.notify("Autocomplete: ENABLED", vim.log.levels.INFO)
+    else
+        -- Immediately hide the completion menu if it's currently open
+        pcall(blink.hide)
+        vim.notify("Autocomplete: DISABLED", vim.log.levels.WARN)
+    end
 end, { desc = 'Toggle Autocomplete' })
