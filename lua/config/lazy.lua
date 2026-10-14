@@ -28,22 +28,37 @@ require("lazy").setup({
         {
             "nyoom-engineering/oxocarbon.nvim",
         },
-        {
-            "saghen/blink.cmp",
-            version = "1.*", -- Pin to tagged releases to prevent breaking upstream API updates
-            dependencies = {
-                "rafamadriz/friendly-snippets",
-            },
-            config = function(_, opts)
-                -- 1. SMASH LAZY'S ACTIVE INTERCEPTORS IMMEDIATELY
-                pcall(vim.keymap.del, "i", "<Tab>")
-                pcall(vim.keymap.del, "i", "<S-Tab>")
-                pcall(vim.keymap.del, "i", "<CR>")
+         "saghen/blink.cmp",
+    version = "1.*", -- Pin to tagged releases to prevent breaking upstream API updates
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+    },
+    opts = {
+      completion = {
+        accept = {
+          auto_brackets = { enabled = true },
+        },
+      },
+      keymap = {
+        preset = "none",
+        ["<Tab>"] = { "select_next", "fallback" },
+        ["<S-Tab>"] = { "select_prev", "fallback" },
+        -- Custom execution rule to split blink menu and mini.pairs
+        ["<CR>"] = {
+          function(cmp)
+            if cmp.is_visible() then
+              return cmp.accept()
+            else
+              return vim.api.nvim_replace_termcodes(MiniPairs.cr(), true, true, true)
+            end
+          end,
+        },
+      },
+    },
+    config = function(_, opts)
+      require("blink.cmp").setup(opts)
+    end,
 
-                -- 2. Run blink's native engine configuration
-                require("blink.cmp").setup(opts)
-            end,
-        }
 
 
     },
