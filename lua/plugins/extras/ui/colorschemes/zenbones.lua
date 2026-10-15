@@ -1,6 +1,6 @@
 return {
-  "mcchrish/zenbones.nvim",
-  name = "zenbones",
-  lazy = false,
-  opts = {},
+    -- "mcchrish/zenbones.nvim",
+    -- name = "zenbones",
+    -- lazy = false,
+    -- opts = {},
 }
