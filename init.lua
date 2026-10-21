@@ -34,3 +34,10 @@ vim.keymap.set('n', '<leader>a', function()
         vim.notify("Autocomplete: DISABLED", vim.log.levels.WARN)
     end
 end, { desc = 'Toggle Autocomplete' })
+
+vim.api.nvim_create_autocmd("BufReadCmd", {
+  pattern = "dap-src://*",
+  callback = function()
+    vim.bo.swapfile = false
+  end,
+})
