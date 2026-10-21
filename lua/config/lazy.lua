@@ -44,6 +44,7 @@ require("lazy").setup({
                     preset = "none",
                     ["<Tab>"] = { "select_next", "fallback" },
                     ["<S-Tab>"] = { "select_prev", "fallback" },
+                    ["<C-e>"] = { "hide" },
                     -- Custom execution rule to split blink menu and mini.pairs
                     ["<CR>"] = {
                         function(cmp)
